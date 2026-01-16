@@ -31,7 +31,7 @@ English guide is here >>> [GUIDE_EN.md](https://github.com/linser233/uMesh/blob/
      [Meshtastic Linux 安装指南](https://meshtastic.org/docs/software/linux/installation)  
 
 7. **获取并放置配置文件**  
-   - 访问项目仓库 [meshtastic/firmware 官方GitHub](https://github.com/meshtastic/firmware/tree/develop/bin/config.d) 或 [uMesh GitHub](https://github.com/linser233/uMesh)  
+   - 访问项目仓库 [uMesh GitHub](https://github.com/linser233/uMesh)  
    - 根据模块的 PCB 或包装标签，下载对应的配置文件：  
      - `lora-usb-umesh-1262-30dbm.yaml`  
      - `lora-usb-umesh-1262-33dbm.yaml`  
@@ -74,3 +74,4 @@ English guide is here >>> [GUIDE_EN.md](https://github.com/linser233/uMesh/blob/
 - **天线匹配**  
 
   使用与模块频段一致的天线（如 CN470、EU868、US915 等），避免损坏或性能下降。  
+
