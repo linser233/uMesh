@@ -31,11 +31,15 @@
      [Meshtastic Linux Installation Guide](https://meshtastic.org/docs/software/linux/installation)  
 
 7. **Obtain and place the configuration file**  
-   - Visit the repositories [meshtastic/firmware official GitHub](https://github.com/meshtastic/firmware/tree/develop/bin/config.d) or [uMesh GitHub](https://github.com/linser233/uMesh).  
-   - Based on the PCB or packaging label of your module, download either `lora-usb-umesh-1262.yaml` or `lora-usb-umesh-1268.yaml`.  
+   - Visit the repositories [uMesh GitHub](https://github.com/linser233/uMesh).  
+   - Based on the PCB or packaging label of your module, download the corresponding configuration file:  
+     - `lora-usb-umesh-1262-30dbm.yaml`  
+     - `lora-usb-umesh-1262-33dbm.yaml`  
+     - `lora-usb-umesh-1268-30dbm.yaml`  
+     - `lora-usb-umesh-1268-33dbm.yaml`
    - Place the file into the configuration directory:  
      ```bash
-     sudo cp lora-usb-umesh-126*.yaml /etc/meshtasticd/config.d/
+     sudo cp lora-usb-umesh-126*-**dbm.yaml /etc/meshtasticd/config.d/
      ```  
    - 💡 **Tip:** This step is usually handled automatically. Manual action is only required if you need to adjust transmit power or if `auto` detection does not work properly.  
 
@@ -67,4 +71,5 @@
   ⚠️ This option is subject to **local regulations** and **hardware limitations**. Please comply accordingly.  
 
 - **Antenna matching**  
+
   Use an antenna that matches the module’s frequency band (e.g., CN470, EU868, US915) to avoid damage or degraded performance.  
