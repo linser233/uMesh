@@ -32,12 +32,16 @@ English guide is here >>> [GUIDE_EN.md](https://github.com/linser233/uMesh/blob/
 
 7. **获取并放置配置文件**  
    - 访问项目仓库 [meshtastic/firmware 官方GitHub](https://github.com/meshtastic/firmware/tree/develop/bin/config.d) 或 [uMesh GitHub](https://github.com/linser233/uMesh)  
-   - 根据模块 PCB 或包装上的标记，下载 `lora-usb-umesh-1262.yaml` 或 `lora-usb-umesh-1268.yaml`。  
+   - 根据模块的 PCB 或包装标签，下载对应的配置文件：  
+     - `lora-usb-umesh-1262-30dbm.yaml`  
+     - `lora-usb-umesh-1262-33dbm.yaml`  
+     - `lora-usb-umesh-1268-30dbm.yaml`  
+     - `lora-usb-umesh-1268-33dbm.yaml`
    - 将文件放入配置目录：  
      ```bash
-     sudo cp lora-usb-umesh-126*.yaml /etc/meshtasticd/config.d/
+     sudo cp lora-usb-umesh-126*-**dbm.yaml /etc/meshtasticd/config.d/
      ```  
-   - 💡 **提示：**这一步理论上是自动完成的，只有在需要手动调整发射功率或 `auto` 检测未能正常工作时才需要手动操作。  
+   - 💡 **提示：** 这一步通常会自动完成。只有在需要手动调整发射功率、`auto` 检测未能正常工作，或您购买的是 33 dBm 版本时，才需要手动操作。  
 
 8. **启动或重启 meshtasticd 服务**  
    - 使用 systemd 管理服务：  
@@ -68,4 +72,5 @@ English guide is here >>> [GUIDE_EN.md](https://github.com/linser233/uMesh/blob/
 
 
 - **天线匹配**  
+
   使用与模块频段一致的天线（如 CN470、EU868、US915 等），避免损坏或性能下降。  
