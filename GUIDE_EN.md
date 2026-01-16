@@ -41,7 +41,7 @@
      ```bash
      sudo cp lora-usb-umesh-126*-**dbm.yaml /etc/meshtasticd/config.d/
      ```  
-   - 💡 **Tip:** This step is usually handled automatically. Manual action is only required if you need to adjust transmit power or if `auto` detection does not work properly.  
+   - 💡 **Tip:** This step is usually carried out automatically. Manual intervention is only required if you need to adjust the transmission power, if `auto` detection does not function correctly, or if you have purchased the 33 dBm version. 
 
 8. **Start or restart the meshtasticd service**  
    - Manage the service with systemd:  
@@ -73,3 +73,4 @@
 - **Antenna matching**  
 
   Use an antenna that matches the module’s frequency band (e.g., CN470, EU868, US915) to avoid damage or degraded performance.  
+
